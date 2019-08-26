@@ -1,6 +1,7 @@
 #11.06.2019 IADDRESS Module
 from bs4 import BeautifulSoup
 import DRIVER
+import time
 
 def existInIAddress(page): ##tu sprawdzanie czy istnieje czy nie
     soup = BeautifulSoup(page,'lxml')
@@ -13,6 +14,7 @@ def existInIAddress(page): ##tu sprawdzanie czy istnieje czy nie
 
 def getData(companyElectronicAddress,driver):
     page = DRIVER.getDataFromIAddress(driver,companyElectronicAddress)
+    #time.sleep(60)
     t = existInIAddress(page)
     lista=list()
     if t!='error':

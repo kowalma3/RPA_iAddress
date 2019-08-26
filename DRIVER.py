@@ -54,7 +54,7 @@ def getDataFromIAddress(driver,companyElectronicAddress):
     select.select_by_visible_text('eDIRA')
     
     driver.find_element_by_id("searchSubmit").click()
-    time.sleep(10)
+    time.sleep(60)
     try:
         return driver.page_source
     except:

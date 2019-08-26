@@ -10,6 +10,7 @@
 
 import time
 from selenium.webdriver.support.ui import Select
+import OPERATORS
 def addNewOrg(driver, name, ticket):
     link = 'https://iaddress.itella.net/eivc-ui/hd/organization-create.htm'
 
@@ -52,7 +53,9 @@ def addNewSite(driver,org_link, operator,electronic_address, ticket):
 
     select = Select(e)   ##????
 
-
+    oper = OPERATORS.op.get(operator)
+    operator = oper
+    
     select.select_by_value(operator) #lista operatorow albo już bedzie dory numer podany np '75', albo trzeba tu wybrac
 
 

@@ -1,3 +1,17 @@
-2019-07-10:001c88efdb52bb00122017a94b9619fd::ERROR, it is not form for Finland
-2019-07-10:05dbc4efdb52bb00122017a94b961924::ERROR, it is not form for Finland
-2019-07-10:1759f46edb097b40122017a94b96192a::ERROR, operator not correct, or OC operator
+2019-08-26:ac6dd1f4dba3ff00a0fd944adb9619ce:OCRITM0463478:Routing has been changed
+2019-08-26:f80da97cdb2733000cdf9693db961975:OCRITM0463492:Routing exist
+2019-08-26:858aee74db2bff842660980adb96195b::ERROR, operator not correct, or OC operator
+2019-08-26:8f3b26f4db2337007d789044db9619e0::ERROR, caller Nordea
+2019-08-26:96a83af4db2773000cdf9693db9619c5:OCRITM0463617:ERROR, to many possibilieties
+2019-08-26:028e9a70dbaff3007d789044db961960:OCRITM0463554:New routing has been added
+2019-08-26:632e1270dbaff3007d789044db961962:OCRITM0463553:New routing has been added
+2019-08-26:99b32278db2f7700d10b9644db9619fb:OCRITM0463574:New routing has been added
+2019-08-26:26c0ee38db2373000cdf9693db9619b0:OCRITM0463561:Routing exist
+2019-08-26:e2c5fa3cdbabff842660980adb96190a:OCRITM0463610:Routing has been changed
+2019-08-26:e2c5fa3cdbabff842660980adb96190a:OCRITM0463610:No acction has been recognized
+2019-08-26:0710627cdb67ff842660980adb961945:OCRITM0463559:New routing has been added
+2019-08-26:79724fb0dba773000cdf9693db9619c0:OCRITM0463633:Routing exist
+2019-08-26:43dfdab4db2373000cdf9693db96192e:OCRITM0463557:Routing has been changed
+2019-08-26:ed1afe3cdb633340a0fd944adb9619aa:OCRITM0463621:Routing has been changed
+2019-08-26:ed1afe3cdb633340a0fd944adb9619aa:OCRITM0463621:No acction has been recognized
+OCRITM0463551 = done manually

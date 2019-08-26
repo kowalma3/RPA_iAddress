@@ -18,6 +18,22 @@ ROBOT_GROUP = conf.OC_CS_FI_Customer_Service_Robots
 
 ROGER = conf.sa_rpa_roger
 
+
+def assignToRoger(sys_id):
+
+    url = HOST+'/api/now/table/sc_req_item/'+sys_id
+    headers = {"Content-Type":"application/json","Accept":"application/json"}
+
+    d = {'assigned_to':ROGER}
+
+    dane = json.dumps(d)
+
+    response = requests.put(url, auth=(OFUSER, OFPWD), headers=headers ,data=dane)
+
+    if response.status_code != 200: 
+        return 'ERROR'
+
+    
 def returnToCS(sys_id, message): #simple return, if case was already processed, or not B2B request
 
     
@@ -56,6 +72,7 @@ def getCasesFromQueue(): #build list of tasks to be processed, first validation,
             for element in temp:
                 if "Request for new B2B e-invoice routing to iAddress" in element.get('short_description'):
                     lista.append(element.get('sys_id',None))
+                    assignToRoger(element.get('sys_id',None))
                 else:
                     #oddaj do CS, z informacja, ze to nie jest
                     message = returnToCS(element.get('sys_id',None),'Based on short description, this is not B2B routing request')

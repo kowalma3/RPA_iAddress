@@ -36,7 +36,7 @@ def checkName(nazwa, driver):
     driver = driver
     page = DRIVER.ytj_search(driver,nazwa)
     if page !='error':
-        tab = page_part.find_all('td')
+        tab = page.find_all('td') ##bylo page_part
         for i in range(len(tab)):
             if name in str(tab[i]):
                 newName = tab[i].string.strip()
@@ -68,7 +68,9 @@ def ytjCheck(driver, ovt, nazwa):
 
     else:
             #po vat nie znajdzie to sprawdzi ewentualnie nazwe
-            d= checkName(nazwa, driver)
+            #d= checkName(nazwa, driver)
+            d['ytj_company_name']=''
+            d['ytj_error']='ERROR, to many possibilieties'
             
 
     return d

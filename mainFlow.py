@@ -1,6 +1,8 @@
 #30.07.2019
 #Main Flow
 
+###Tieto dodac/skopiowac!!
+
 import OF #opusflow module, a set of functions to communication with opusflow.
 import log
 import DRIVER
@@ -9,6 +11,8 @@ import IADDRESS_Module
 import OPERATORS, iAddressOperators
 import time
 import datetime
+import ChangeExisting
+import AddNew
 
 def data(date):
     now = datetime.datetime.now()
@@ -94,7 +98,7 @@ def mainFlow():
         lista = temp
     else:
         print('no tasks in queue exit program')
-        exit() ##no tasks in queue exit program
+        #exit() ##no tasks in queue exit program, czy to potrzebne?
 
 
 
@@ -200,8 +204,8 @@ def mainFlow():
         if potwierdzenie == 'y':
 
             ####funkcja w petli
-            for element in addNeww:
-                link = AddNew.addNew(driver,element.get('ytj_name'),element.get('number'))
+            for element in addNew:
+                link = AddNew.addNewOrg(driver,element.get('ytj_name'),element.get('number'))
                 operator = operator_number(element.get('operator'))
                 AddNew.addNewSite(driver,link,operator,element.get('busines_id'), element.get('number'))
                 time.sleep(10)
@@ -226,11 +230,16 @@ def mainFlow():
                 if_date = data(element.get('date'))
 
                 if if_date:
-                    data = zmodyfikuj_date(element.get('date'))
+                    data_ = zmodyfikuj_date(element.get('date'))
                 else:
-                    data=''
+                    data_=''
 
-                CahngeExisting.changeSite(driver,element.get('site_link'),element.get('operator'),element.get('address_tbc'),data,element.get('number'))
+                if element.get('electronic_adr') == element.get('address_tbc') and element.get('lmc')== OPERATORS.op.get(element.get('operator')):
+                    log.add_log(element['sys_id']+':'+element['number']+':'+'Routing exist')
+                    OF.returnToCS(element['sys_id'],'Routing exist')
+                    continue
+
+                ChangeExisting.changeSite(driver,element.get('site_link'),element.get('operator'),element.get('address_tbc'),data_,element.get('number'))
                 time.sleep(10)
                 log.add_log(element['sys_id']+':'+element['number']+':'+'Routing has been changed')
                 OF.returnToCS(element['sys_id'],'Routing has been changed, please inform customer')

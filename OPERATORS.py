@@ -3,14 +3,14 @@
 op={
 
     'Danske Bank (DABAFIHH)':'DanskeBankB2B', #banks
-    'Nordea Bank (NDEAFIHH)':'NordeaB2B',
-    'Osuuspankki (OKOYFIHH)':'OsuuspankkiB2B',
-    'Säästöpankkien Keskuspankki Suomi Oy (ITELFIHH)':'SäästöpankkiB2B',
-    'Aktia Pankki (HELSFIHH)':'AktiaB2B',
-    'Ålandsbanken (AABAFI22)':'ÅlandsbankenB2B',
-    'Handelsbanken (HANDFIHH)':'HandelsbankenB2B',
-    'POP Pankki (POPFFI22)':'PopPankkiB2B',
-    'S-Pankki (SBANFIHH)':'S-PankkiB2B',
+    'Nordea Bank (NDEAFIHH)':'Nordea B2B',
+    'Osuuspankki (OKOYFIHH)':'Osuuspankki B2B',
+    'Säästöpankkien Keskuspankki Suomi Oy (ITELFIHH)':'Säästöpankki B2B',
+    'Aktia Pankki (HELSFIHH)':'Aktia B2B',
+    'Ålandsbanken (AABAFI22)':'Ålandsbanken B2B',
+    'Handelsbanken (HANDFIHH)':'Handelsbanken B2B',
+    'POP Pankki (POPFFI22)':'PopPankki B2B',
+    'S-Pankki (SBANFIHH)':'S-Pankki B2B',
     'Liaison (003708599126)':'Liaison',#operators
     'Apix Messaging Oy (003723327487)':'Apix',
     'Basware (003705925424 / BAWCFI22 / BWEI)':'Basware',
