@@ -14,4 +14,11 @@
 2019-08-26:43dfdab4db2373000cdf9693db96192e:OCRITM0463557:Routing has been changed
 2019-08-26:ed1afe3cdb633340a0fd944adb9619aa:OCRITM0463621:Routing has been changed
 2019-08-26:ed1afe3cdb633340a0fd944adb9619aa:OCRITM0463621:No acction has been recognized
-OCRITM0463551 = done manually
+OCRITM0463551 = done manually2019-08-27:5bd56a49db63b3000cdf9693db961937:OCRITM0463714:Routing has been changed
+2019-08-27:38a3db01dbebb3000cdf9693db9619ca:OCRITM0463770:ERROR, ytj ovt couldn't be found
+2019-08-27:caab33c9dbe3730004cb948adb9619d8::ERROR, operator not correct, or OC operator
+2019-08-27:ce8d338ddb6b73c42660980adb9619a1:OCRITM0463825:New routing has been added
+2019-08-27:a38773c1dbab7f000ffa9407db96195b:OCRITM0463816:Routing has been changed
+2019-08-27:a38773c1dbab7f000ffa9407db96195b:OCRITM0463816:No acction has been recognized@@removed
+2019-08-27:a493b30ddbe773c42660980adb9619b6:OCRITM0463807:New routing has been added
+2019-08-27:2d4d00d1db6bf3000cdf9693db961907:OCRITM0463848:Routing exist

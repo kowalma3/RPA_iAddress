@@ -168,8 +168,8 @@ def getDataFromTask(sys_id):
                                 
             l.update({'company_name':var[2].get('value','')}) #company name
             l.update({'edira':var[4].get('value','')}) #edira
-            l.update({'busines_id':var[7].get('value','')}) #business id
-            l.update({'address_tbc':var[8].get('value','')}) #address to be changed
+            l.update({'busines_id':var[7].get('value','')}) #business id company receiving id
+            l.update({'address_tbc':var[8].get('value','')}) #address to be changed company electronic address
 
             ##get operator
             operator = var[10].get('value','')

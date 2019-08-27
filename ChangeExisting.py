@@ -21,19 +21,29 @@ def getXpath(driver):
     return xpath
 
 
+def checkIdentifiersNumber(page):
+    soup = BeautifulSoup(page,'lxml')
 
+
+    t = soup.find('table',id='siteIdentifiersTable')
+
+    rows = t.find_all('tr')
+
+    return(len(rows))
 
 def changeSite(driver, siteId, operator, electronic_address ,date,ticket): ##
     oper=operator
     operator = OPERATORS.op.get(oper)
-    print(operator)
-    print(siteId)
-##    oper = operator
-##    operator = str(OP.op.get(oper))
+
 
     
     driver.get("https://iaddress.itella.net/eivc-ui/hd/"+siteId)
     time.sleep(5)
+    page = driver.page_source
+    ##check how many identyfiers 2019-08-27
+    if(checkIdentifiersNumber(page)>2):
+        #oddaj do CS z notka
+        return ERROR
     #search for one enabled, to at the end disable it
 
     path = getXpath(driver)
@@ -51,7 +61,7 @@ def changeSite(driver, siteId, operator, electronic_address ,date,ticket): ##
 
 
     if date:
-        e.driver.find_element_by_id('effectiveStart')
+        e=driver.find_element_by_id('effectiveStart')
         e.click()
         time.sleep(1)
         e.click()
@@ -106,3 +116,4 @@ def changeSite(driver, siteId, operator, electronic_address ,date,ticket): ##
     e.click()
 
     time.sleep(2)
+    return 'OK'

@@ -1,7 +1,7 @@
 #30.07.2019
 #Main Flow
 
-###Tieto dodac/skopiowac!!
+###Tieto dodac/skopiowac!! dzis!!!
 
 import OF #opusflow module, a set of functions to communication with opusflow.
 import log
@@ -59,8 +59,8 @@ def getData(l, ticket):
     d.update({'sys_id':ticket['sys_id']})
     d.update({'operator':ticket['operator']})
     d.update({'date':ticket['date']})
-    d.update({'busines_id':ticket['busines_id']})
-    d.update({'address_tbc':ticket['address_tbc']})
+    d.update({'busines_id':ticket['busines_id']}) #company receiving id
+    d.update({'address_tbc':ticket['address_tbc']}) #company electronic address
 
     return d
  ######stare nowe, co na co zmieniamy, dokonczyc jesli czegos zabraknie
@@ -206,8 +206,9 @@ def mainFlow():
             ####funkcja w petli
             for element in addNew:
                 link = AddNew.addNewOrg(driver,element.get('ytj_name'),element.get('number'))
-                operator = operator_number(element.get('operator'))
-                AddNew.addNewSite(driver,link,operator,element.get('busines_id'), element.get('number'))
+                #operator = operator_number(element.get('operator'))
+                operator = element.get('operator')
+                AddNew.addNewSite(driver,link,operator,element.get('busines_id'),element.get('address_tbc'),element.get('number'))
                 time.sleep(10)
                 ##zalogowac
                 log.add_log(element['sys_id']+':'+element['number']+':'+'New routing has been added')
@@ -239,10 +240,14 @@ def mainFlow():
                     OF.returnToCS(element['sys_id'],'Routing exist')
                     continue
 
-                ChangeExisting.changeSite(driver,element.get('site_link'),element.get('operator'),element.get('address_tbc'),data_,element.get('number'))
+                odp = ChangeExisting.changeSite(driver,element.get('site_link'),element.get('operator'),element.get('address_tbc'),data_,element.get('number'))
                 time.sleep(10)
-                log.add_log(element['sys_id']+':'+element['number']+':'+'Routing has been changed')
-                OF.returnToCS(element['sys_id'],'Routing has been changed, please inform customer')
+                if odp == 'OK':
+                    log.add_log(element['sys_id']+':'+element['number']+':'+'Routing has been changed')
+                    OF.returnToCS(element['sys_id'],'Routing has been changed, please inform customer')
+                else if odp == 'ERROR':
+                    log.add_log(element['sys_id']+':'+element['number']+':'+'2 Receiving Identifiers please check')
+                    OF.returnToCS(element['sys_id'],'2 Receiving Identifiers please check')
 
     print("\n\n wszystko disabled \n\n")
     print(allDisabled)
@@ -260,8 +265,7 @@ def mainFlow():
     print(main_lista)
 
     if main_lista:
-        log.add_log(element['sys_id']+':'+element['number']+':'+'No acction has been recognized')
-        OF.returnToCS(element['sys_id'],'No acction has been recognized, please check')
+        print('wywolaj jeszcze raz narazie, trzeba sprawdzic dlaczego wszystkie sie nie lapia do akcji!!!i i dopisz tieto')
 
 
 
