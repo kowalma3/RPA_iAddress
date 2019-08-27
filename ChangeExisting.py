@@ -57,6 +57,8 @@ def changeSite(driver, siteId, operator, electronic_address ,date,ticket): ##
     select = Select(e)
     select.select_by_visible_text(operator)
     e = driver.find_element_by_id('electronicAddress')
+    if "Tieto" in operator:                             ###if Tieto operator only!!
+        electronic_address = 'TE'+ electronic_address
     e.send_keys(electronic_address)
 
 

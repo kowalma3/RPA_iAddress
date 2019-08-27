@@ -52,7 +52,11 @@ def getData(l, ticket):
     for element in l:
         if 'enable' in element['status'].lower():
             d.update({'site_link':element['site_link']})
-            d.update({'electronic_adr':element['electronic_adr']})
+            if 'TE' in element['electronic_adr']:           ###tieto operator!!!! drugi w ChangeExisting.py
+                adr = element['electronic_adr'][2:]
+            else:
+                adr = element['electronic_adr']
+            d.update({'electronic_adr':adr})
             d.update({'lmc':element['lmc']})
 
     d.update({'number':ticket['number']})
