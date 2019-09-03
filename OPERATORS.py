@@ -2,14 +2,14 @@
 
 op={
 
-    'Danske Bank (DABAFIHH)':'DanskeBankB2B', #banks
+    'Danske Bank (DABAFIHH)':'Danske Bank B2B', #banks
     'Nordea Bank (NDEAFIHH)':'Nordea B2B',
     'Osuuspankki (OKOYFIHH)':'Osuuspankki B2B',
     'Säästöpankkien Keskuspankki Suomi Oy (ITELFIHH)':'Säästöpankki B2B',
     'Aktia Pankki (HELSFIHH)':'Aktia B2B',
     'Ålandsbanken (AABAFI22)':'Ålandsbanken B2B',
     'Handelsbanken (HANDFIHH)':'Handelsbanken B2B',
-    'POP Pankki (POPFFI22)':'PopPankki B2B',
+    'POP Pankki (POPFFI22)':'Pop Pankki B2B',
     'S-Pankki (SBANFIHH)':'S-Pankki B2B',
     'Liaison (003708599126)':'Liaison',#operators
     'Apix Messaging Oy (003723327487)':'Apix',
@@ -28,11 +28,11 @@ op={
     'Netbox (003726044706)':'NetboxeInvoice',
     'OB10 / Tungsten Network Limited (GB177907267)':'TungstenNetworkLimited(ubltr)',
     #'OpusCapita':'',
-    'Pagero (PAGERO / 003723609900)':'Pagero',
+    'Pagero (PAGERO / 003723609900 )':'Pagero',
     'Palette (PALETTE)':'PaletteSvefaktura2.0',
     #'PostNord Strålfors (003701150617 / STROLFSEGW)':'', 
     'TrueCommerce (Progator / Evenex / HighJump) (EVENEX(/ubl))':'TrueCommerce',
-    'Ropo Capital Oy (Enfo Zender Oy) (003714377140)':'RopoCapital',
+    'Ropo Capital Oy (Enfo Zender Oy) (003714377140)':'Ropo Capital',
     'Sproom (SPROOM)':'Sproom',
     'Tieto (003701011385)':'Tieto',
     'CGI (003703575029)':'CGI',

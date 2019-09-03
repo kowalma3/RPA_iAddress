@@ -46,6 +46,8 @@ def logToiAddress(driver):
     e3.click()
 
 def getDataFromIAddress(driver,companyElectronicAddress):
+    driver.get('https://iaddress.itella.net/eivc-ui/hd/home.htm')
+    time.sleep(5)
     e = driver.find_element_by_id('id')####was search is now
     e.clear()
     e.send_keys(companyElectronicAddress.strip()+'*')#companyElectronicAddress ??

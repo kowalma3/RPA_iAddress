@@ -22,3 +22,81 @@ OCRITM0463551 = done manually2019-08-27:5bd56a49db63b3000cdf9693db961937:OCRITM0
 2019-08-27:a38773c1dbab7f000ffa9407db96195b:OCRITM0463816:No acction has been recognized@@removed
 2019-08-27:a493b30ddbe773c42660980adb9619b6:OCRITM0463807:New routing has been added
 2019-08-27:2d4d00d1db6bf3000cdf9693db961907:OCRITM0463848:Routing exist
+2019-08-28:a418ff59db6b7b407255969adb9619f8:OCRITM0463917:New routing has been added
+2019-08-28:50b7f865dba7f7007d789044db961945::ERROR, operator not correct, or OC operator
+2019-08-28:1b7bcce1dbefb340a0fd944adb9619b5:OCRITM0463951:Routing exist
+2019-08-28:165189a9db27f30004cb948adb96193a:OCRITM0464031:Routing exist
+2019-08-28:57338da1dbeff3c42660980adb961982:OCRITM0464034:Routing exist
+2019-08-28:4c0b0d65db6fbb407255969adb961953:OCRITM0464045:OC routing enabled
+----
+
+2019-08-29:17700d39db23b7000cdf9693db961904:OCRITM0464161:Routing has been changed
+2019-08-29:3eef74f5db2b3b007d789044db96196b:OCRITM0464160:Routing exist
+2019-08-29:3f144dfddb2b3b007d789044db9619e7:OCRITM0464167:Routing exist
+2019-08-29:b033513ddb6777c42660980adb961919:OCRITM0464191:Routing has been changed
+2019-08-29:ba979129dbefff000ffa9407db96199c:OCRITM0464070:Routing has been changed
+2019-08-29:c3b2053ddbe33740a0fd944adb961952:OCRITM0464165:Routing exist
+2019-08-29:d0c8b079dba33740a0fd944adb9619f4:OCRITM0464151:Routing has been changed
+
+2019-08-29:81efb435dbe33740a0fd944adb961906:OCRITM0464159:Routing exist
+2019-08-29:a6b03d3ddbeb3740a0fd944adb961968:OCRITM0464245:Routing has been changed
+2019-08-30:13554631db23f7000cdf9693db9619e1:OCRITM0464273:Routing exist
+2019-08-30:23ed86c2db6f7f407255969adb9619cc:OCRITM0464386:Routing has been changed
+2019-08-30:27d4c239db2b73400ffa9407db96196d:OCRITM0464272:Routing exist
+2019-08-30:2d70de4adbe33f00d10b9644db961982:OCRITM0464391:Routing has been changed
+2019-08-30:364092b5dba3f7000cdf9693db96199a:OCRITM0464286:Routing exist
+2019-08-30:3fe7c2f1db67770004cb948adb96190e:OCRITM0464277:Routing exist
+2019-08-30:40ddf139db6f3740a0fd944adb96195f:OCRITM0464260:2 routing enabled
+2019-08-30:4f32c235dbefb7000cdf9693db9619eb:OCRITM0464270:Routing exist
+2019-08-30:532d4a82db6f7f407255969adb9619f4:OCRITM0464385:2 routing enabled
+2019-08-30:643e3d39db6f3740a0fd944adb961912:OCRITM0464262:Routing exist
+2019-08-30:6a621a02db273f00d10b9644db961994:OCRITM0464396:Routing exist
+2019-08-30:9092d202dbaf7f407255969adb96190e:OCRITM0464397:Routing has been changed
+2019-08-30:9e26a2fddbe7f7000cdf9693db9619f8:OCRITM0464318:Routing exist
+2019-08-30:aeb60e7ddb2b73400ffa9407db961971:OCRITM0464274:New routing has been added
+2019-08-30:af1e3575dbe773400ffa9407db9619bc:OCRITM0464261:New routing has been added
+2019-08-30:b0c80e0adba33f00d10b9644db961998:OCRITM0464376:Routing exist
+2019-08-30:b6e7c686dba33f00d10b9644db961949:OCRITM0464374:Routing has been changed
+2019-08-30:c1c2a6f5dbe7f7000cdf9693db9619d5:OCRITM0464316:New routing has been added
+2019-08-30:dd15e2f1db2bb7c42660980adb961900:OCRITM0464317:Routing exist
+2019-08-30:e93192cadbe33f00d10b9644db961965:OCRITM0464395:Routing has been changed
+2019-09-03 14:19:02bdc70edb6f3f00d10b9644db96192f:OCRITM0464483:2 routing enabled
+2019-09-03 14:20:03a6c35fdb277b400ffa9407db961906:OCRITM0464977:Routing has been changed
+2019-09-03 14:23:17443dc3dba3bf007d789044db9619b5:OCRITM0464663:Routing exist
+2019-09-03 14:26:20655bcedbabbf407255969adb961962:OCRITM0464500:New routing has been added
+2019-09-03 14:28:2ef76ecfdbafbf007d789044db96190b:OCRITM0464786:Routing exist
+2019-09-03 16:38:364744afdb2773407d789044db9619af:OCRITM0465105:Operator is OpusCapita , operator can't be changed
+2019-09-03 16:49:36e0e54fdb2b73807255969adb9619ce:OCRITM0464630:Routing exist, close complete
+2019-09-03 16:51:4af72ecfdbafbf007d789044db9619da:OCRITM0464784:Routing has been changed, close complete
+2019-09-03 16:53:4bfea682db6b3f00d10b9644db9619ea:OCRITM0464444:Routing has been changed, close complete
+2019-09-03 16:55:4d5f8b42db2bfb007d789044db9619bf:OCRITM0464486:Routing exist, close complete
+2019-09-03 16:57:4f0cbacbdb67bb0004cb948adb961922:OCRITM0464829:New routing has been added, close complete
+2019-09-03 16:59:5445329fdb637b400ffa9407db961902:OCRITM0464939:Routing exist, close complete
+2019-09-03 17:00:56ef75cfdb2f73807255969adb96192d:OCRITM0464691:Routing exist, close complete
+2019-09-03 17:02:580a8a8fdbe7bf007d789044db961928:OCRITM0464710:Routing exist, close complete
+2019-09-03 17:03:6a7fa94bdb27fb000cdf9693db96191c:OCRITM0464653:Routing exist, close complete
+2019-09-03 17:06:7061a64edb23bf407255969adb96198b:OCRITM0464421:New routing has been added, close complete
+2019-09-03 17:07:726483c7db6b3340d10b9644db96198e:OCRITM0464858:Routing exist, close complete
+2019-09-03 17:10:7ba9aa47db6ffb000cdf9693db96191d:OCRITM0464795:New routing has been added, close complete
+
+
+2019-09-03 17:36:8ef72ecfdbafbf007d789044db9619c4:OCRITM0464783:Routing exist, close complete
+2019-09-03 17:38:a4d11643dbabbf007d789044db961938:OCRITM0464733:Routing exist, close complete
+2019-09-03 17:40:a8700bd7dbef3f000cdf9693db9619c5:OCRITM0464958:New routing has been added, close complete
+2019-09-03 19:39:8a9da94fdb23bf007d789044db961916:OCRITM0464651:Operator is OpusCapita , operator can't be changed, close incomplete
+2019-09-03 19:39:8a9da94fdb23bf007d789044db961916:OCRITM0464651:OC routing enabled,close incomplete
+2019-09-03 19:42:b351af53db6b7b400ffa9407db96192d:OCRITM0465029:Routing has been changed, close complete
+2019-09-03 19:44:b5c06b82db2737400ffa9407db961979:OCRITM0464511:Routing exist, close complete
+2019-09-03 19:46:bd2d3dc3db2f7b0004cb948adb961997:OCRITM0464677:New routing has been added, close complete
+2019-09-03 19:48:c63d1602db23bf407255969adb9619d9:OCRITM0464418:Routing exist, close complete
+2019-09-03 19:49:caebb213dbe37b400ffa9407db961901:OCRITM0464952:Routing exist, close complete
+2019-09-03 19:51:cb81cfc3dbe7bb0004cb948adb961926:OCRITM0464852:Routing has been changed, close complete
+2019-09-03 19:53:cc434b53db277b400ffa9407db9619bf:OCRITM0464965:Routing exist, close complete
+2019-09-03 19:54:cf71124fdbef7b0004cb948adb9619d0:OCRITM0464730:Routing has been changed, close complete
+2019-09-03 19:56:e1676b93dbab7b400ffa9407db9619ec:OCRITM0465050:Routing exist, close complete
+2019-09-03 19:57:e33f4bc3dbe7b3807255969adb9619b0:OCRITM0464877:Routing has been changed, close complete
+2019-09-03 19:59:eaf76ecfdbafbf007d789044db961921:OCRITM0464785:Routing exist, close complete
+2019-09-03 20:00:edd0bb5fdbef33407d789044db961911:OCRITM0465067:Routing exist, close complete
+2019-09-03 20:02:f55b10afdb6737807255969adb9619ca:OCRITM0465153:Routing has been changed, close complete
+2019-09-03 20:04:f92a2b8adba37f00d10b9644db9619ea:OCRITM0464527:Routing exist, close complete
+2019-09-03 20:20:fd2f838edb6f3f00d10b9644db9619c0:OCRITM0464485:Routing exist, 2 routings, close complete

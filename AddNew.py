@@ -79,7 +79,8 @@ def addNewSite(driver,org_link, operator,receiving, el_address,ticket):
 
 
     e=driver.find_element_by_id('electronicAddress')
-
+    if 'Tieto' in operator:     ##Tieto operator specjal treatment
+        el_address = 'TE'+el_address
     e.send_keys(el_address)
     e.click()
     e=driver.find_element_by_id('operationTicketId')

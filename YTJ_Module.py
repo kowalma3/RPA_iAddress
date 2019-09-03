@@ -13,7 +13,7 @@ def ytjInfoPagePart(page):
     return t
 
 def vat(ovt):
-    vat=ovt[4:11]+'-'+ovt[-1]
+    vat=ovt[4:11]+'-'+ovt[11]
     vat=str(vat).strip()
     return vat
 

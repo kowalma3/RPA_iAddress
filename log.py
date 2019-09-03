@@ -9,6 +9,7 @@ today = datetime.today().strftime('%Y-%m-%d')
 
 def add_log(log):
     with open(wasProcessed,'a') as file:
+        today = datetime.today().strftime('%Y-%m-%d %H:%M')
         file.write(today+':'+log+'\n')
 
 

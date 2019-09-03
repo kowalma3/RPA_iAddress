@@ -119,9 +119,11 @@ def mainFlow():
             main_lista.append(temp)
 
     ###ytj validation
-    ###jak problem z nazwa, oddaj narazie do CS z informacja i usun z listy
+
+    print('ilosc tixow przed ytj check:'+len(main_lista))
 
     temp = main_lista
+    
 
     for ticket in main_lista:
         cn = ticket.get('company_name','')
@@ -136,12 +138,13 @@ def mainFlow():
         if error == 'OK':
             ticket.update({'ytj_name':ytj_d.get('ytj_company_name','')})
         else:
-
-            OF.returnToCS(ticket['sys_id'],ytj_d.get('ytj_error','')+' - please inform customer') ##tu zmienic na oddawanie klientowi
-            log.add_log(ticket['sys_id']+':'+ticket['number']+':'+ytj_d.get('ytj_error',''))
+            OF.informCustomer(ticket['sys_id'],'2') #inform customer
+            OF.returnToCS(ticket['sys_id'],ytj_d.get('ytj_error','')+' - please inform customer, scenario 2') ##send to CS
+            log.add_log(ticket['sys_id']+':'+ticket['number']+':'+ytj_d.get('ytj_error','')+':customer informed - scenario 2, ticket send to CS')
             temp.remove(ticket)
 
     main_lista=temp
+    print('ilosc tixow po ytj check:'+len(main_lista))
       ###iAddress validation, and actions
       ###return to CS if OC routing, 2 enables, exist as requested
       ###create "Add new" list of dictionaries
@@ -249,7 +252,7 @@ def mainFlow():
                 if odp == 'OK':
                     log.add_log(element['sys_id']+':'+element['number']+':'+'Routing has been changed')
                     OF.returnToCS(element['sys_id'],'Routing has been changed, please inform customer')
-                else if odp == 'ERROR':
+                elif odp == 'ERROR':
                     log.add_log(element['sys_id']+':'+element['number']+':'+'2 Receiving Identifiers please check')
                     OF.returnToCS(element['sys_id'],'2 Receiving Identifiers please check')
 
