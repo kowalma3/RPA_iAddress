@@ -97,7 +97,7 @@ def sendMessage(driver, sys_id,description):
 
     elem=driver.find_element_by_id('sys_display.cc_block')
     elem.clear()
-    elem.send_keys('Tiina.Astren@opuscapita.com')
+    elem.send_keys('Tiina.Astren@opuscapita.com,Ilari.Nieminen@opuscapita.com')
 
     driver.switch_to.frame(driver.find_element_by_id('message.text_ifr'))
     elem=driver.find_element_by_xpath('//*[@id="tinymce"]')
@@ -135,7 +135,7 @@ def create_report():
     print(currentHouer)
     currentDate = datetime.today().strftime('%Y-%m-%d')
     if currentHouer == '12':
-        l = ['08','09','10','11']
+        l = ['00','01','02','03','04','05','06','07','08','09','10','11']
         for H in l:
             
             for line in data:
@@ -143,7 +143,14 @@ def create_report():
                     report = report + line +'\n'
 
     elif currentHouer == '15':
-        l= ['12','13','14','15']
+        l= ['12','13','14','15','16','17','18','19','20','21','22','23']
+        for H in l:
+            print(currentDate+' '+ H )
+            for line in data:
+                if currentDate+' '+H in line:
+                    report = report + line +'\n'
+    elif currentHouer == '23':
+        l= ['15','16','17','18','19','20','21','22','23']
         for H in l:
             print(currentDate+' '+ H )
             for line in data:
@@ -179,7 +186,7 @@ def main():
         sendMessage(driver, sys_id,message)
         close(sys_id)
 
-main()
+
 
 
 

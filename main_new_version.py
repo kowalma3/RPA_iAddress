@@ -1,4 +1,4 @@
-#30.07.2019
+#04.09.2019
 #Main Flow
 
 ###Tieto dodac/skopiowac!! dzis!!!
@@ -11,9 +11,11 @@ import IADDRESS_Module
 import OPERATORS, iAddressOperators
 import time
 import datetime
+
 import ChangeExisting
 import AddNew
 import check_if_proper_site_is_loaded
+import send_report
 
 def data(date):
     now = datetime.datetime.now()
@@ -95,21 +97,26 @@ def addNew(driver,element):
     print(element) #usun
     potwierdzenie = input("is it correct? y/n ")#usun
     if potwierdzenie == 'y': #usun
-        
-        link = AddNew.addNewOrg(driver,element.get('ytj_name'),element.get('number'))
+        company = ''
+        if len(element.get('')) > 12:
+            company=element.get('company_name')
+        else:
+            company=element.get('ytj_name')
+            
+        link = AddNew.addNewOrg(driver,company,element.get('number'))
         #operator = operator_number(element.get('operator'))
         operator = element.get('operator')
         AddNew.addNewSite(driver,link,operator,element.get('busines_id'),element.get('address_tbc'),element.get('number'))
         time.sleep(10)
         ##zalogowac
-        OF.informCustomer(element['sys_id'],'1')
+        #OF.informCustomer(element['sys_id'],'1')
         log.add_log(element['sys_id']+':'+element['number']+':'+'New routing has been added, close complete')
         OF.close(element['sys_id'],'1',3)
         print('closed')
         
         #OF.returnToCS(element['sys_id'],'New routing has been added,customer informed, scenario1') ##zamienic na close complete
         ##oddac do CS/ponformowac klienta
-def allDisabledAdd(driver, element):
+def allDisabledAdd(driver, element):##################################################################################################################################################################
     print('all disabled check org_link before accept!!!!! should be tested:') #usun
     print(element) #usun
     potwierdzenie = input("is it correct? y/n ")
@@ -147,7 +154,7 @@ def change(driver,element):
             time.sleep(10)
             if odp == 'OK':
                 log.add_log(element['sys_id']+':'+element['number']+':'+'Routing has been changed, close complete')
-                OF.informCustomer(element['sys_id'],'1')
+                #OF.informCustomer(element['sys_id'],'1')
                 OF.close(element['sys_id'],'1',3)
                 print('closed')
                 #OF.returnToCS(element['sys_id'],'Routing has been changed, customer informed')
@@ -164,7 +171,7 @@ def mainFlow():
 
     #####tu dodam
 
-    #check_if_proper_site_is_loaded.check(driver,lista)
+    #check_if_proper_site_is_loaded.check(driver,lista) ####poprawic jeszcze
 
     if lista:
 
@@ -226,6 +233,7 @@ def mainFlow():
     for ticket in main_lista:
         print('next ticket')
         potwierdzenie = input("is it correct? y/n ")
+        OC = False
         if potwierdzenie == 'y':
             ##zmiana logiki sprawdz iAddress i podejmij decyzje.Wszystkie tixy powinny sie lapac teraz
             #pobieram dane z iAddressu
@@ -233,14 +241,15 @@ def mainFlow():
             bi.strip(' ')
             l=IADDRESS_Module.getData(bi,driver)
             if 'opus' in ticket.get('operator').lower():
-
+                ## - send to CS back
                 ###########OC w tixie, co robić? OC in IAddress, routing exist, other case return to CS, 'Operator is OpusCapita , operator can't be changed' 
                 ########w przyszlosci sprobuj zmienic na powyzsze
-                #OF.returnToCS(ticket['sys_id'],'Operator is OpusCapita , operator can\'t be changed') ##podmien na close
-                OF.informCustomer(ticket['sys_id'],'4')
-                OF.close(ticket['sys_id'],'4',4)
+                OF.returnToCS(ticket['sys_id'],'Operator is OpusCapita , operator can\'t be changed') ##potem sprawdz czy routing istnieje i zamknij 
+                #OF.informCustomer(ticket['sys_id'],'4')
+                #OF.close(ticket['sys_id'],'4',4)
                 
-                log.add_log(ticket['sys_id']+':'+ticket['number']+':'+'Operator is OpusCapita , operator can\'t be changed, close incomplete')
+                log.add_log(ticket['sys_id']+':'+ticket['number']+':'+'Operator is OpusCapita return to CS')
+                OC = True
             if l == '':
                 #nie ma wpisow w iAdress, dodaj nowy wpis
                 addNew(driver,ticket)
@@ -248,8 +257,9 @@ def mainFlow():
                 #OC Routing
                 #OF.informCustomer(ticket['sys_id'],'4')
                 #OF.returnToCS(ticket['sys_id'],'OC routing enabled, scenario 4, customer informed') ##podmien na close
-                OF.close(ticket['sys_id'],'4',4)
-                log.add_log(ticket['sys_id']+':'+ticket['number']+':'+'OC routing enabled,close incomplete')
+                if not OC :
+                    OF.close(ticket['sys_id'],'4',4)
+                    log.add_log(ticket['sys_id']+':'+ticket['number']+':'+'OC routing enabled,close incomplete')
             elif twoRoutings(l) == 2: ####tu zostal dodany kod
                 #>%
                 exist = False
@@ -279,9 +289,15 @@ def mainFlow():
                 d= getData(l,ticket)
                 if d:
                     change(driver,d)
-    driver.close()
-    driver.quit()
-###wywolanie,
+    DRIVER.end(driver)
+
     
 if __name__ == '__main__':
-    mainFlow()
+    
+    while True:
+        mainFlow()
+        currentHouer = datetime.datetime.today().strftime('%H')
+        if currentHouer in ['12','15','23']:
+            send_report.main()
+        time.sleep(1800)
+    

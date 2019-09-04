@@ -14,7 +14,17 @@ def existInIAddress(page): ##tu sprawdzanie czy istnieje czy nie
 
 def getData(companyElectronicAddress,driver):
     page = DRIVER.getDataFromIAddress(driver,companyElectronicAddress)
-    #time.sleep(60)
+##    time.sleep(60)
+    soup = BeautifulSoup(page,'lxml')
+    t = soup.find_all('a')
+    
+    for element in t:
+            for i in element.contents:
+                if "Click to see all" in i:
+                        #print('JEST')
+                        e = driver.find_element_by_xpath('/html/body/div[1]/div[3]/div[2]/div/div/table/tbody/tr[2]/td/h1/a')
+                        e.click()
+                        time.sleep(30)
     t = existInIAddress(page)
     lista=list()
     if t!='error':

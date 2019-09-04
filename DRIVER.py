@@ -12,6 +12,7 @@ def start():
     return driver
 
 def end(driver):
+    driver.close()
     driver.quit()
 
 def load_page(driver,url):

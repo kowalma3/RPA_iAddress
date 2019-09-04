@@ -56,7 +56,9 @@ def checkIaddressPage(driver):
 
 def check(driver, list_of_tasks):
     ytj = checkYtjPage(driver)
+    sleep(10)
     iaddress = checkIaddressPage(driver)
+    sleep(10)
     
     if ytj == 'OK' and iaddress == 'OK':
         return 'OK'

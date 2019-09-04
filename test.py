@@ -1,6 +1,6 @@
 import DRIVER, AddNew
 
-import OPERATORS,iAddressOperators
+import OPERATORS,iAddressOperators, IADDRESS_Module
 
 from bs4 import BeautifulSoup
 
@@ -8,20 +8,10 @@ from bs4 import BeautifulSoup
 driver = DRIVER.start()
 DRIVER.logToiAddress(driver)
 
-driver.get('https://iaddress.itella.net/eivc-ui/hd/site-edit.htm?siteId=629233')
-
-page = driver.page_source
-
-soup = BeautifulSoup(page,'lxml')
+IADDRESS_Module.getData('003717560557',driver)
 
 
-t = soup.find('table',id='siteIdentifiersTable')
 
-rows = t.find_all('tr')
-
-print(len(rows))
-
-#
 #link = AddNew.addNewOrg(driver, 'test1_kowalma3', 'OCRT12345')
 ##link='https://iaddress.itella.net/eivc-ui/hd/organization-edit.htm?orgId=557402'
 ###print(link)
